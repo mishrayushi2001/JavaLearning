@@ -76,10 +76,70 @@ class BasicsDemo {
     System.out.println("Student 3: "+students[2].name);
 //    System.out.println("Student 4: "+students[3].name);
   }
+  static void threeDimensionalArrays() {
+    System.out.println("\nInside threeDimensionalArrays ...");
+    int[][][] unitsSold = new int[][][]{
+            { // New York
+                    {0,0,0,0}, // Jan
+                    {0,0,0,0}, // Feb
+                    {0,0,0,0}, // Mar
+                    {0,850,0,0}// Apr
+            },
+            { // San Francisco
+                    {0,0,0,0}, // Jan
+                    {0,0,0,0}, // Feb
+                    {0,0,0,0}, // Mar
+                    {0,0,0,0}  // Apr
+            },
+            {
+                    {0,0,0,0},
+                    {0,0,0,0},
+                    {0,0,0,0},
+                    {0,0,0,0}
+            },
+            {
+                    {0,0,0,0},
+                    {0,0,0,0},
+                    {0,0,0,0},
+                    {0,0,0,0}
+            }
+    };
+
+    System.out.println("unitsSold[0][3][1]: " + unitsSold[0][3][1]);
+  }
+  static double sum(double x,double y){
+    return x+y;
+  }
+  static double avg(double x,double y){
+    double sum =sum(x,y);
+    return sum/2;
+  }
+  static boolean search(int[] list, int key){
+    return true;
+  }
+  static  void go(int[] array){
+    System.out.println("array[0]: "+array[0]);
+    System.out.println("array[1]: "+array[1]);
+    array[1]=22;
+  }
+  static  void go(int i){
+    System.out.println("go(int i)");
+  }
+  static  void go(short s){
+    System.out.println("go(short s)");
+  }
+  static void varargsOverload(boolean b,int i,int j,int k){
+    System.out.println("\nInside varargsOverload without varargs ...");
+  }
+  static  void varargsOverload(boolean b, int... list){
+    System.out.println("\nInside varargsOverload with varargs ...");
+    System.out.println("list.length: "+list.length);
+  }
   
   public static void main(String[] args) {
     // Language Basics 1
-    arrays();
+//    threeDimensionalArrays();
+//    arrays();
 //    print();
 //    primitive();
 //    typeCasting();
@@ -90,11 +150,32 @@ class BasicsDemo {
 //    System.out.println(i*j);
 //    System.out.println(i/j);
 //    System.out.println(i%j);
+    int[] array ={1,2};
+    go(array);
+    System.out.println("array[1]: "+array[1]);
+
+    varargsOverload(true,1,2,3);
+    varargsOverload(true,1,2,3,4,5,6,7,8);
+    varargsOverload(true);
+
+
+    double d =sum (3.0f,2.0); //reusing sum in avg method
+    System.out.println(d);
+
+
+
+    double d2 =avg (3.0,2.0);
+    System.out.println(d2);
     double price =1000;
     double discountPercent =0.9;
     double discountAmount = price * discountPercent;
     System.out.println(price * discountAmount);
     System.out.println(price *(1-discountPercent));
+    int[] list ={1,2};
+    search(list,2);
 
+    go(1000);
+    byte b=22;
+    go(b);
   }
 }
