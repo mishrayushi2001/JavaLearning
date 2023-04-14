@@ -63,9 +63,9 @@ class BasicsDemo {
     System.out.println("n exams: "+scores.length);
 
     Student[] students =new Student[3];
-    students[0]=new Student();
-    students[1]=new Student();
-    students[2]=new Student();
+    students[0]=new Student(1000,"John","male",18,223_345_34567L,3.2,'B',false);
+    students[1]=new Student(1001,"Aryan","male",22,456_918_2767L,3.8,'B',true);
+    students[2]=new Student(1003,"Ishaan","male",22,456_213_2767L,3.4,'B',true);
     students[0].name="John";
     students[1].name="Raj";
     students[2].name="Anita";
