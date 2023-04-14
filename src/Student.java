@@ -13,7 +13,37 @@ public class Student {
     double internationalFees = tuitionFees = 5000.0 ;
 
     Student(int newId,String newName, String newGender,int newAge, long newPhone, double newGpa,
+            char newDegree){
+//        id =newId;
+//        name  =newName;
+//        gender =newGender;
+//        age = newAge;
+//        phone = newPhone;
+//        gpa =newGpa;
+//        degree =newDegree;
+//
+//        studentCount = studentCount+1;
+//        int nextId =id+1;  //local variable
+//
+//        System.out.println(" id :"+id);
+//        System.out.println(" nextId: "+nextId);
+//        System.out.println(" name: "+name);
+//
+//        System.out.println(" gender: "+gender);
+//
+//        System.out.println(" age : "+age);
+//        System.out.println(" phone : "+phone);
+//        System.out.println(" gpa : "+gpa);
+//        System.out.println(" degree : " +degree);
+//        System.out.println(" tuitionFees: "+tuitionFees);
+//        System.out.println(" computeCount: "+studentCount);
+//        System.out.println(" Student.computeCount: "+Student.studentCount);
+    this(newId,newName, newGender,newAge,newPhone,newGpa,newDegree,false);
+    }
+
+    Student(int newId,String newName, String newGender,int newAge, long newPhone, double newGpa,
                     char newDegree, boolean isInternational){
+//        this(newId,newName, newGender,newAge,newPhone,newGpa,newDegree);
         id =newId;
         name  =newName;
         gender =newGender;
@@ -68,9 +98,10 @@ public class Student {
 //        System.out.println(" computeCount: "+computeCount);
 //        System.out.println(" Student.computeCount: "+Student.computeCount);
 //    }
+    Student(){}
     static Student student3;
     public static void main(String[] args){
-        Student student1=new Student(1000,"John","male",18,223_345_34567L,3.2,'B',false);
+        Student student1=new Student(1000,"John","male",18,223_345_34567L,3.2,'B');
 //        student1.id =1000;
 //        student1.name ="John";
 //        student1.gender = "male";
